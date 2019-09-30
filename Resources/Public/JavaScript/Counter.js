@@ -41,7 +41,7 @@ let lavitto_counter = {
 		if (!el.hasClass('counter-started')) {
 			let delay = parseFloat(el.data('counter-delay')) * 1000;
 			setTimeout(function () {
-				if(el.data('counter-start-effect') === 'fadein') {
+				if (el.data('counter-start-effect') === 'fadein') {
 					let startEffectDuration = parseInt(el.data('counter-start-effect-duration'));
 					el.animate({'opacity': 1}, startEffectDuration);
 				}
@@ -67,12 +67,52 @@ let lavitto_counter = {
 			duration: duration,
 			easing: easing,
 			step: function () {
-				numberEl.text(Math.ceil(this.count));
+				numberEl.text(lavitto_counter.numberFormat(Math.ceil(this.count)));
 			},
 			complete: function () {
-				numberEl.text(end);
+				numberEl.text(lavitto_counter.numberFormat(end));
 			}
 		});
+	},
+
+	/**
+	 * Returns the number as formatted string
+	 *
+	 * @param number
+	 * @returns {string}
+	 */
+	numberFormat: function (number) {
+		number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
+
+		let decimals = 0, decPoint = '.', thousandsSep = '\'';
+		let n = !isFinite(+number) ? 0 : +number,
+			prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+			sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep,
+			dec = (typeof decPoint === 'undefined') ? '.' : decPoint,
+			s = '';
+
+		let toFixedFix = function (n, prec) {
+			if (('' + n).indexOf('e') === -1) {
+				return +(Math.round(n + 'e+' + prec) + 'e-' + prec)
+			} else {
+				let arr = ('' + n).split('e'),
+					sig = '';
+				if (+arr[1] + prec > 0) {
+					sig = '+'
+				}
+				return (+(Math.round(+arr[0] + 'e' + sig + (+arr[1] + prec)) + 'e-' + prec)).toFixed(prec)
+			}
+		};
+
+		s = (prec ? toFixedFix(n, prec).toString() : '' + Math.round(n)).split('.');
+		if (s[0].length > 3) {
+			s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+		}
+		if ((s[1] || '').length < prec) {
+			s[1] = s[1] || ''
+			s[1] += new Array(prec - s[1].length + 1).join('0')
+		}
+		return s.join(dec)
 	},
 
 	/**
