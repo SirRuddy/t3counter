@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1427832976" source-language="en" datatype="plaintext" original="messages" date="2014-02-07T20:22:32Z"
+		  product-name="counter">
+		<header/>
+		<body>
+			<!-- General -->
+			<trans-unit id="counter_counter">
+				<source>Animated Counter</source>
+			</trans-unit>
+
+			<!-- Wizard -->
+			<trans-unit id="counter_counter.wizard.title">
+				<source>Animated Counter</source>
+			</trans-unit>
+			<trans-unit id="counter_counter.wizard.description">
+				<source>Adds an animated counter to the page</source>
+			</trans-unit>
+
+			<!-- Flexform -->
+			<trans-unit id="tt_content.counter_counter.pi_flexform">
+				<source>Settings</source>
+			</trans-unit>
+
+			<!-- Flexform Sheet: General -->
+			<trans-unit id="tt_content.counter_counter.pi_flexform.sheet.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.start">
+				<source>First number</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.end">
+				<source>Last number</source>
+			</trans-unit>
+
+			<!-- Flexform Sheet: Appearance -->
+			<trans-unit id="tt_content.counter_counter.pi_flexform.sheet.appearance">
+				<source>Appearance</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.duration">
+				<source>Duration (seconds)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.delay">
+				<source>Start delay (seconds)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.start_effect">
+				<source>Start effect</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.start_effect.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.start_effect.fadein">
+				<source>Fade in</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.easing">
+				<source>Effect/Easing</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.easing.linear">
+				<source>Standard (Linear)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.easing.easein">
+				<source>Slow start</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.easing.easeout">
+				<source>Slow end</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.easing.easeinout">
+				<source>Slow start and end</source>
+			</trans-unit>
+
+			<!-- Flexform Sheet: General -->
+			<trans-unit id="tt_content.counter_counter.pi_flexform.sheet.contents">
+				<source>Title/Description</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tt_content.counter_counter.pi_flexform.description">
+				<source>Description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

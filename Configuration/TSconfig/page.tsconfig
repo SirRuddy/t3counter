@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		counter_counter {
+			iconIdentifier = ext-counter-counter
+			title = LLL:EXT:counter/Resources/Private/Language/Tca.xlf:counter_counter.wizard.title
+			description = LLL:EXT:counter/Resources/Private/Language/Tca.xlf:counter_counter.wizard.description
+			tt_content_defValues {
+				CType = counter_counter
+			}
+		}
+	}
+
+	show := addToList(counter_counter)
+}

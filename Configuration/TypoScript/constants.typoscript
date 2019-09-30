@@ -1,0 +1,7 @@
+plugin.tx_counter {
+	# cat=plugin.tx_counter/basic/b1; type=boolean; label=Load jQuery: Enable this, if your website does not already use jQuery (loads jquery 3.4.1)
+	enableJquery = 0
+
+	# cat=plugin.tx_counter/basic/b1; type=boolean; label=Load jQuery UI: Enable this, if your website does not already use jQuery UI (loads jquery-ui 1.12.1)
+	enableJqueryUi = 0
+}

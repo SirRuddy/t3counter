@@ -1,0 +1,53 @@
+{
+  "name": "lavitto/typo3-counter",
+  "description": "Animated Counter for TYPO3",
+  "type": "typo3-cms-extension",
+  "keywords": [
+    "TYPO3",
+    "extension"
+  ],
+  "homepage": "https://www.lavitto.ch/typo3-ext-counter",
+  "authors": [
+    {
+      "name": "Philipp Mueller",
+      "email": "philipp.mueller@lavitto.ch",
+      "homepage": "https://www.lavitto.ch"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    }
+  ],
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "typo3/cms-core": "^8.7 || ^9.5",
+    "typo3/cms-extbase": "^8.7 || ^9.5",
+    "typo3/cms-fluid": "^8.7 || ^9.5",
+    "typo3/cms-frontend": "^8.7 || ^9.5",
+    "typo3/cms-backend": "^8.7 || ^9.5"
+  },
+  "suggest": {
+  },
+  "replace": {
+    "lavitto/typo3-counter": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lavitto\\Counter\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "counter",
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  }
+}

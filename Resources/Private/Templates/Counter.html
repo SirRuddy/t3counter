@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:lo="http://typo3.org/ns/Lavitto/Counter/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Header">
+	<f:render partial="Header/All" arguments="{_all}"/>
+</f:section>
+
+<f:section name="Main">
+	<f:variable name="counterSettings"
+				value="{lo:renderFlexFormSettings(flexform: data.pi_flexform, defaultSettings: settings.counter)}"/>
+	<div class="ce-counter{f:if(condition: '{counterSettings.startEffect} == \'fadein\'', then: ' counter-invisible')} border text-center p-3 mb-4"
+		 data-counter-start="{counterSettings.start}" data-counter-end="{counterSettings.end}"
+		 data-counter-duration="{counterSettings.duration}" data-counter-delay="{counterSettings.delay}"
+		 data-counter-lazy-start="{counterSettings.lazyStart}" data-counter-easing="{counterSettings.easing}"
+		 data-counter-start-effect="{counterSettings.startEffect}"
+		 data-counter-start-effect-duration="{counterSettings.startEffectDuration}">
+		<div class="display-3 number text-center">{counterSettings.start}</div>
+		<f:render partial="Counter/AdditionalContent" arguments="{_all}"/>
+	</div>
+</f:section>
+
+</html>

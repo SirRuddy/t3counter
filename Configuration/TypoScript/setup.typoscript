@@ -1,0 +1,43 @@
+lib.contentElement {
+  templateRootPaths.1569833847 = EXT:counter/Resources/Private/Templates/
+  partialRootPaths.1569833847 = EXT:counter/Resources/Private/Partials/
+}
+
+tt_content {
+  counter_counter =< lib.contentElement
+  counter_counter {
+    templateName = Counter
+    settings {
+      counter {
+        start = 0
+        end = 100
+        duration = 5000
+        delay = 0
+        lazyStart = 1
+        startEffect = none
+        startEffectDuration = 500
+        easing = linear
+        title =
+        description =
+      }
+    }
+  }
+}
+
+page {
+  cssInline {
+    1569833847 = TEXT
+    1569833847.value = .counter-invisible{opacity:0}
+  }
+
+  includeJSFooter {
+    tx_counter_jquery = EXT:counter/Resources/Public/Libraries/jquery-3.4.1/jquery-3.4.1.min.js
+    tx_counter_jquery.if.isTrue = {$plugin.tx_counter.enableJquery}
+
+    tx_counter_jqueryui = EXT:counter/Resources/Public/Libraries/jqueryui-1.12.1/jquery-ui-1.12.1.min.js
+    tx_counter_jqueryui.if.isTrue = {$plugin.tx_counter.enableJqueryUi}
+
+    tx_counter = EXT:counter/Resources/Public/JavaScript/Counter.min.js
+    tx_counter.async = 1
+  }
+}
