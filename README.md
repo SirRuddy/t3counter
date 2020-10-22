@@ -1,9 +1,9 @@
 # TYPO3 Extension `Animated Counter`
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/lavittoag/10)
-[![Latest Stable Version](https://poser.pugx.org/lavitto/typo3-counter/v/stable)](https://packagist.org/packages/lavitto/typo3-counter)
-[![Total Downloads](https://poser.pugx.org/lavitto/typo3-counter/downloads)](https://packagist.org/packages/lavitto/typo3-counter)
-[![License](https://poser.pugx.org/lavitto/typo3-counter/license)](https://packagist.org/packages/lavitto/typo3-counter)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge)](https://paypal.me/pmlavitto)
+[![Latest Stable Version](https://img.shields.io/packagist/v/lavitto/typo3-counter?style=for-the-badge)](https://packagist.org/packages/lavitto/typo3-counter)
+[![TYPO3](https://img.shields.io/badge/TYPO3-counter-%23f49700?style=for-the-badge)](https://extensions.typo3.org/extension/counter/)
+[![License](https://img.shields.io/packagist/l/lavitto/typo3-counter?style=for-the-badge)](https://packagist.org/packages/lavitto/typo3-counter)
 
 > This extension adds an animated counter content element to your TYPO3 website.
 
