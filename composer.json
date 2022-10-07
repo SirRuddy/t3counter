@@ -35,9 +35,6 @@
   },
   "suggest": {
   },
-  "replace": {
-    "lavitto/typo3-counter": "self.version"
-  },
   "autoload": {
     "psr-4": {
       "Lavitto\\Counter\\": "Classes"
